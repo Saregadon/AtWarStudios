@@ -16,10 +16,17 @@ body {
   background-image: url(./img/ian-schneider-TamMbr4okv4-unsplash.jpg);
   height: 100vh;
   width: 100%;
-  background-position: center;
+  background-position: center; /*bottom, center look good, pick which ones do later*/
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+}
+
+.header .container{
+  display: flex;
+  padding: 1rem 6%;
+  align-items: left;
+  color: black;
 }
 
 /*JOST FONT*/
