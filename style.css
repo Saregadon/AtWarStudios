@@ -3,6 +3,15 @@ body {
   }
   /*HAVE THE AT WAR STUDIO IN THE BACKGORUND, THAT OR HAVE IT AT THE TOP WIHT THE BANNER*/
 
+.bg-charcoal {
+    background-color: #333; /* Charcoal grey color code */
+}
+
+#black-to-white-gradient{
+  background-color: grey;
+  background-image: linear-gradient(to right, black, white)
+}
+
 /*JOST FONT*/
 .jost-font {
   font-family: "Jost", sans-serif;
