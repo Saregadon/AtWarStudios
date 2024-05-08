@@ -12,6 +12,14 @@ body {
   background-image: linear-gradient(to right, black, white)
 }
 
+.navbar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
 .header{
   background-image: url(./img/ian-schneider-TamMbr4okv4-unsplash.jpg);
   height: 100vh;
@@ -20,12 +28,27 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  position: relative;
 }
 
-.header .container{
-  display: flex;
-  padding: 1rem 6%;
-  align-items: left;
+.header .container .box{
+  position: absolute;
+  top: 25%;
+  left: 6%;
+  transform: translate(0%, -50%);
+  max-width: 50%;
+  height: fit-content;
+}
+
+.header .box h1{
+  color: black;
+}
+
+.header .box h2{
+  color: black;
+}
+
+.header .box p{
   color: black;
 }
 
