@@ -12,6 +12,16 @@ body {
   background-image: linear-gradient(to right, black, white)
 }
 
+.header{
+  background-image: url(./img/ian-schneider-TamMbr4okv4-unsplash.jpg);
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 /*JOST FONT*/
 .jost-font {
   font-family: "Jost", sans-serif;
