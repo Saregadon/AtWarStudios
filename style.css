@@ -3,10 +3,8 @@ body {
   }
   /*HAVE THE AT WAR STUDIO IN THE BACKGORUND, THAT OR HAVE IT AT THE TOP WIHT THE BANNER*/
 
-  /*// <uniquifier>: Use a unique and descriptive class name
-  
 /*JOST FONT*/
-.jost-Style {
+.jost-font {
   font-family: "Jost", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300; /* <weight>: Use a value from 100 to 900*/
