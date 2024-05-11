@@ -3,6 +3,26 @@ body {
   }
   /*HAVE THE AT WAR STUDIO IN THE BACKGORUND, THAT OR HAVE IT AT THE TOP WIHT THE BANNER*/
 
+body{
+  position: relative;
+}
+
+h1{
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 50px;
+}
+
+h1{
+  font-size: 35px;
+  font-weight: 500;
+}
+
+h1{
+  font-size: 35px;
+  font-weight: 400;
+}
+
 .bg-charcoal {
     background-color: #333; /* Charcoal grey color code */
 }
@@ -29,6 +49,18 @@ body {
   background-size: cover;
   background-attachment: fixed;
   position: relative;
+}
+
+.header .box{
+  position:absolute;
+  top: 50%;
+  left: 6%;
+  transform: translate(0%, -50%);
+  max-width: 50%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .header .container .box{
