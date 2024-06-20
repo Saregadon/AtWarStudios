@@ -116,7 +116,7 @@ p{
 
 .image-container img {
   width: 100%;  /* Full width of the container */
-  height: 100vh;  /* Full viewport height */
+  height: 100%;  /* Full viewport height */
   object-fit: cover;  /* Ensure images cover the area appropriately */
   display: block;  /* Block display to avoid any inline gaps */
 }
@@ -126,24 +126,30 @@ p{
   bottom: 20px;
   transform: translateX(-50%); /* Centers the midpoint of the buttons' group at 50% */
   z-index: 10;
-  background: transparent; /* Ensure no background color is visible */
+  background: white; /* Ensure no background color is visible */
   border-color: black; /* Remove any default border */
   color: inherit; /* Inherit the text color from parent, if needed */
   cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+  border-radius: 50%;
+  font-size: 16px;
+  margin: 4px 2px;
+  text-align: center;
+  padding: 10px;
+  display: inline-block;
 }
 
 #left-button {
-  left: calc(50% - 35px); /* Shifts left button to the left side of center */
+  left: calc(90% - 35px); /* Shifts left button to the left side of center */
   border-color: #000000;
 }
 
 #right-button {
-  left: calc(50% + 35px); /* Shifts right button to the right side of center */
+  left: calc(90% + 35px); /* Shifts right button to the right side of center */
   border-color: #000000;
 }
 
 #left-button:hover, #right-button:hover {
-  background-color: white; /* Black background on hover */
+  background-color: grey; /* Black background on hover */
   color: black; /* White color for the icons on hover */
   transition: all 0.5s;
 }
