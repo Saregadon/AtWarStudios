@@ -37,9 +37,8 @@ function Images() {
         //image margins
         newImage.style.marginRight = "10px";
         newImage.style.marginLeft = "10px";
+        img.appendChild(newImage);
     }
-
-    newImage.setAttribute('id', 'myImage')
 }
 
 //splits fullpath to get filename
