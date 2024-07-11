@@ -1,62 +1,48 @@
 document.addEventListener("DOMContentLoaded", function() {
     const rightButton = document.getElementById('right-button');
     const leftButton = document.getElementById('left-button')
-    const imageContainer = document.querySelector('.image-container');
-    let shiftPercentage = 0; // Track the cumulative shift percentage
+    //const imageContainer = document.querySelector('.image-container');
 
     rightButton.addEventListener('click', function() {
-        shiftPercentage += 25; // Shift the view by 100% of the container width to the left
-
-        if(shiftPercentage >= 100){
-            shiftPercentage = 0;
-        }
-
-        // Apply a smooth transition
-        imageContainer.style.transition = 'transform 0.5s ease-in-out';
-        imageContainer.style.transform = `translateX(-${shiftPercentage}%)`;
-
-        // Check if we have completed a full cycle of images
-        if (shiftPercentage === 100 * (imageContainer.children.length - 1)) {
-            imageContainer.addEventListener('transitionend', function() {
-                // Reset the container position without animation
-                imageContainer.style.transition = 'none';
-                imageContainer.style.transform = 'translateX(0)';
-
-                // Reorder the images by moving the first image to the end
-                const firstImage = imageContainer.removeChild(imageContainer.firstElementChild);
-                imageContainer.appendChild(firstImage);
-
-                // Reset shift percentage
-                shiftPercentage = 0;
-            }, { once: true }); // Ensure the listener is only triggered once per cycle
-        }
+        document.getElementById('img').style.zIndex += 1;
     });
 
     leftButton.addEventListener('click', function() {
-        shiftPercentage -= 25; // Shift the view by 100% of the container width to the left
-
-        if(shiftPercentage < 0){
-            shiftPercentage = 75; //shifts to 75% because 0 is first image, 75 is last. 
-        }
-
-        // Apply a smooth transition
-        imageContainer.style.transition = 'transform 0.5s ease-in-out';
-        imageContainer.style.transform = `translateX(-${shiftPercentage}%)`;
-
-        // Check if we have completed a full cycle of images
-        if (shiftPercentage === 100 * (imageContainer.children.length - 1)) {
-            imageContainer.addEventListener('transitionend', function() {
-                // Reset the container position without animation
-                imageContainer.style.transition = 'none';
-                imageContainer.style.transform = 'translateX(0)';
-
-                // Reorder the images by moving the first image to the end
-                const firstImage = imageContainer.removeChild(imageContainer.firstElementChild);
-                imageContainer.appendChild(firstImage);
-
-                // Reset shift percentage
-                shiftPercentage = 0;
-            }, { once: true }); // Ensure the listener is only triggered once per cycle
-        }
+        document.getElementById('img').style.zIndex -= 1;
     });
 });
+
+//adds images and initializates them to the website
+function Images() {
+    let img = document.querySelector('.image-container-showcase img');
+    let imageContainer = [
+        //new images to be pushed to the array for z-index to be updated
+        "C:\Users\Sareg\Documents\AtWarStudiosWebsite\img\Landscape\ian-schneider-TamMbr4okv4-unsplash.jpg",
+        "C:\Users\Sareg\Documents\AtWarStudiosWebsite\img\Portrait\Congrats!-002.jpg",
+        "C:\Users\Sareg\Documents\AtWarStudiosWebsite\img\Portrait\Congrats!-005.jpg",
+        "C:\Users\Sareg\Documents\AtWarStudiosWebsite\img\Portrait\Congrats!-018.jpg"
+    ]
+
+    for(let i = 0; i < imageContainer.length; i++){
+        let newImage = new Image();
+
+        //splits filename for alternate naming convention
+        var file_name_array = splitImgName(imageContainer[i]);
+
+        newImage.src = imageContainer[i];
+        newImage.alt = file_name_array;
+        newImage.width = 100;
+        newImage.height = 100;
+
+        //image margins
+        newImage.style.marginRight = "10px";
+        newImage.style.marginLeft = "10px";
+    }
+
+    newImage.setAttribute('id', 'myImage')
+}
+
+//splits fullpath to get filename
+function splitImgName (str) {
+    return str.split('\\').pop().split('/').pop();
+}

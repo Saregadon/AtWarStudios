@@ -104,9 +104,9 @@ p{
   height: 100%;
 }
 
-.header .container .image-container {
-  height: 100vh;
-  width: 400%;  /* This needs to be 100% times the number of images to accommodate all side by side */
+.header .container .image-container-showcase {
+  height: 100%;
+  width: auto*4;  /* This needs to be 100% times the number of images to accommodate all side by side */
   overflow: hidden;
   white-space: nowrap;
   display: flex;
@@ -114,7 +114,7 @@ p{
   transition: transform 0.5s ease-in-out;  /* Transition for smooth sliding */
 }
 
-.image-container img {
+.image-container-showcase img {
   width: 100%;  /* Full width of the container */
   height: 100%;  /* Full viewport height */
   object-fit: cover;  /* Ensure images cover the area appropriately */
